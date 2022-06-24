@@ -2640,7 +2640,7 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 10.25em;
 		}
 
 /* Footer */
@@ -2700,7 +2700,7 @@ input, select, textarea {
 				padding-top: 0;
 			}
 
-/* Poptrox */
+/* Poptrox 
 
 	@-moz-keyframes spin {
 		0% {
@@ -2764,9 +2764,9 @@ input, select, textarea {
 			-ms-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}
-	}
+	}*/
 
-	.poptrox-popup {
+	/*.poptrox-popup {
 		-moz-box-sizing: content-box;
 		-webkit-box-sizing: content-box;
 		-ms-box-sizing: content-box;
@@ -2955,7 +2955,7 @@ input, select, textarea {
 
 			.poptrox-popup:hover .closer:hover {
 				opacity: 1.0;
-			}
+			}*/
 
 /* Touch */
 
@@ -2972,11 +2972,11 @@ input, select, textarea {
 		background-size: auto, cover;
 	}
 
-	body.is-touch .poptrox-popup .nav-next,
+	/*body.is-touch .poptrox-popup .nav-next,
 	body.is-touch .poptrox-popup .nav-previous,
 	body.is-touch .poptrox-popup .closer {
 		opacity: 1.0 !important;
-	}
+	}*/
 
 /* XLarge */
 
@@ -3183,14 +3183,14 @@ input, select, textarea {
 
 		/* Poptrox */
 
-			.poptrox-popup {
+			/*.poptrox-popup {
 				border-radius: 0;
 			}
 
 				.poptrox-popup .nav-next:before,
 				.poptrox-popup .nav-previous:before {
 					margin-top: -1em;
-				}
+				}*/
 
 	}
 
