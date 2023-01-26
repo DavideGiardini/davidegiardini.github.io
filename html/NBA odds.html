@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Davide Giardini - Scraping NBA's odds</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+					<h1>Hello!<br> My name is <strong>Davide Giardini,</strong><br />
+					I'm a very passionate Data Science student</a>.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- One -->
+					<section id="one">
+                        <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
+						<header class="major">
+							<h1>Scraping NBA's odds</h1>
+                            <h3>WebScraping NBA's Asian Handicaps and Over/Unders from <a href="https://www.oddsportal.com/">oddsportal.com</a> to evaluate the accuracy of NBA odds market.</h3>
+						</header>
+						<p>In the last year of my University Degree in "Statistical Sciences of Economy and Business" I had the pleasure to help one of my uni friends in the writing of his Thesis.
+							As he had a very deep passion for sports, he decided to merge his hobby with statistics. Fortunately for him, sport and statistics are in fact very close to each other, especially in the field of betting.
+							What he wanted to do was trying to <strong>evaluate the odds' precision</strong>.
+							The way he intended to do it was by comparing Asian Handicaps and Over/Unders used before the match for bets with the final result of the match itself. <br>
+                            <br>
+							<blockquote><h4>Asian Handicap</h4>Asian handicap betting is a form of betting in which teams are handicapped according to their form so that a stronger team must win by more points for a bet on them to win.</blockquote>
+							<blockquote><h4>Over/Under</h4>The over/under predicts the combined score of the two teams. Then, the bettors will bet if the combined score would be either more than or less than that number.</blockquote>
+                            For every match, every possible score of both the AH and the O/U is given two odds, one represents the probability that the real AH or O/U will be lower, the other represents the probability that the two will be higher.
+							In this way, the Asian Handicap or the Over/Under for which the two odds are equal (or very near to one another) is the one that the betting market predicts as more probable. <br>
+                            <br>
+							<h4>An example to understand better</h4>
+							In Game 1 of the 2022 <a href="https://www.oddsportal.com/basketball/usa/nba/golden-state-warriors-boston-celtics-MweE8wV8/#ah;1">Finals betweet Golden State Warriors and Boston Celtics</a>, the two Asian Handicap odds reach the same value (1.90) at the AH -3.5.
+							This means that, for the betting market, it is equally probable that the final score will be more than 3.5 points in favor of GSW or less than 3.5 points in favor of GSW, that is to say that the betting market best prediction is that GSW will win with 3.5 points over Boston.<br>
+							In the same match, the two Over/Under odds reach the same value (1.90) at O/U +214.
+							This means that, for the betting market, it is equally probable that the final combined score will be more than or less than 214 points, that is to say that the betting market best prediction is that the combined points will be 214.
+							<br>
+							<blockquote><h4>The Objective</h4>What my friend wanted to do was to compare the AH and O/U in which the two odds reache the same value with the real difference in point (AH) and the real combined score (O/U).</blockquote>
+							<br>
+							<h4>The Scraper</h4>
+							It didn't take long for my friend to realise that there wheren't any dataset that he could use for is research.
+							At the time I had just finished my <a href="https://freecodecamp.org/certification/davide_giardini/scientific-computing-with-python-v7">Scientific Computing with Python</a> and <a href="https://freecodecamp.org/certification/davide_giardini/data-analysis-with-python-v7">Data Analysis with Python</a> FreeCodeCamp's certifications, so I was eager to make a real use out of the Python skills I learned.<br>
+							<br>
+							The scraper uses Selenium and Beautiful Soup to:
+							<ol>
+								<li>Access oddsportal.com</li>
+								<li>Change the time zone</li>
+								<li>Loop through the seasons</li>
+								<ul>
+									<li>Loop through the pages <br>
+									For every page use the function scrape_links to scrape, for every match:</li>
+									<ol class="nowl">
+										<li>The teams involved</li>
+										<li>The final score</li>
+										<li>The date</li>
+										<li>The category (Pre-Season, Regular-Season, Play-In, Play-Off)</li>
+										<li>The links to the odds for the match</li>
+									</ol>
+								</ul>
+							<li>For every link just scraped use the function scrape_odds to:</li>
+								<ul>
+								<li>Open the Asian Handicap section, scrape the odds, find the AH for which the two odds are the most near to one another</li>
+								<li>Open the Over/Under section, scraoe the odds, find the O/U for which the two odds are the most near to one another</li>
+								<li>Scrape the score in every quarter</li>
+								</ul>
+							<li>Use the function correction to recheck the links that lead to missing values</li>
+							</ol>
+							<h4>The resulting Dataset</h4>
+							The resulting dataset provides data from the 2010/2011 NBA season to the current 2021/2022.<br>
+							It is composed of <strong>15868 observation of 12 variables</strong>:
+							<ol>
+								<li><strong>Names:</strong> the teams involved in the match</li>
+								<li><strong>Link:</strong> the link to the odds of the match</li>
+								<li><strong>Score:</strong> the final score</li>
+								<li><strong>Score.q:</strong> the score at the end of every quarter</li>
+								<li><strong>OverTime:</strong> Boolean, True if the match went to Overtime</li>
+								<li><strong>Score.OT:</strong> Score at the beginning of the Overtime</li>
+								<li><strong>Date:</strong> the date of the match</li>
+								<li><strong>Category:</strong> can be Pre-Season, Regular-Season, Play-In, Play-Off</li>
+								<li><strong>AH:</strong> the Asian Handicap for which the two odds are the most near to one another</li>
+								<li><strong>diff.AH:</strong> the difference between the two nearest odds in the AH section</li>
+								<li><strong>O/U:</strong> the Over/Under for which the two odds are the most near to one another</li>
+								<li><strong>diff.OU:</strong> the difference between the two nearest odds in the O/U section</li>
+							</ol>
+						<ul class="actions">
+                            <li><a href="https://github.com/DavideGiardini/OddsPortal-WebScraper" class="button icon brands fa-github">View in Github</a></li>
+						</ul>
+					</section>
+                    <section>
+                        <h3>Tags</h3>
+                        <a class="button">Scraping</a>
+                        <a class="button">Beautiful Soup</a>
+                        <a class="button">Selenium</a>
+                        <a class="button">Sport Statistics</a>
+                        <a class="button">Bets</a>
+                        <a class="button">Python</a>
+                        <a class="button">Data Acquisition</a>
+                        <a class="button">Odds Analysis</a>
+                    </section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/DavideGiardini" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://linkedin.com/in/davide-giardini" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto:davide.giardini00@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

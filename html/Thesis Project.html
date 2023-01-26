@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Davide Giardini - Thesis Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+					<h1>Hello!<br> My name is <strong>Davide Giardini,</strong><br />
+					I'm a very passionate Data Science student</a>.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- One -->
+					<section id="one">
+                        <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
+						<header class="major">
+							<h1>Thesis Project</h1>
+                            <h3>Evaluating the efficiency of Twitter Sentiment Analysis as a tool of prediction for the stock market.</h3>
+						</header>
+						<p><h4>Aim</h4>
+                            The aim of my thesis project was to build a time serie of the polarity of tweets related to a cluster of firms, and compare it to the time serue of the corresponding firm's behaviour in the stock market.
+                            The choosen firms were: Apple, Google, Nike, Nestrlé, Beyond Meat, Bayer and NovaVax. <br>
+                            <br>
+                            <h4>Data Acquisition</h4>
+                            To download all the tweets related to the firms I used Twitter's API. I wrote all the code in R, and automated it thanks to Windows Task Manager, so that the download would have started every day at the same our, by itself. The downloaded tweets were then automatically uploaded to OneDrive, so that I could access them at any time.
+                            I also implemented an automated Gmail notification that would notified me that the download was correctly occured and would send me some general statistics. <br>
+                            <br>
+                            <h4>Sentiment Analysis</h4>
+                            I then proceded to clean all the data, lemmatize it, and analyze it. In order to calculate a sentiment score I used 3 methods:
+                            <ol>
+                                <li><strong>Naive Bayes</strong><br>Based on the Bayes Theorem, the algorithm classifies every tweet as "positive" or "negative" using the "<a href="https://mpqa.cs.pitt.edu/lexicons/subj_lexicon/">MPQA Subjectivity Lexicon</a>" by Janyce Wiebe.</li>
+                                <li><strong>Syuzhet</strong><br>Uses <a href="https://cran.r-project.org/web/packages/syuzhet/syuzhet.pdf">package Syuzhet</a> and homonym dictionary to give a score to each tweet.</li>
+                                <li><strong>Udpipe</strong><br>Uses <a href="https://cran.r-project.org/web/packages/udpipe/udpipe.pdf">package UdPipe</a> (with the MPQA subj lexicon) to give a score to each tweet. Has the possibility to use inensifier, weakeners and modifiers (so that it can, for example, distinguish between "good", "very good", "quite good" and "not good")</li>
+                            </ol>
+                            <br> 
+                            <h4>Conclusion</h4>
+                            In order to evaluate the existence of a relationship of causality between the tweets and the closing price of the firm, I built a test based on Granger Causality Test that I called "<a href="Close Test.html">Close Test</a>". This test brought very positive results highlighting numerous relationship of causality.
+                            The Test Score also found that, in our cluster of firms, using the tweets that only refer to the value of the firm in the stock market (for ex containing: $AAPL, $GOOGL, ecc.) (dataset "stock") is more suitable for a short term prevision (forecasting the closing prize of the same day), while using the tweet tha refer to the company in general (for ex containing also: Apple, Google, ecc.) (dataset "score") is more suitable for longer term prevision (forecasting the value in the next days).<br>
+                            <br>
+                            A deeper look into the visualization and the conclusion brought by the project can be taken by downloading the final report or visualizing the correspont repository in Github.</p>
+						<ul class="actions">
+							<li><a href="/images/fulls/Thesis.pdf" download="Twitter Sentiment Analysis to predict the stock merket" class="button icon solid fa-download">Download Thesis (IT)</a></li>
+                            <li><a href="https://github.com/DavideGiardini/Twitter-Sentiment-Analysis-to-predict-the-stock-market" class="button icon brands fa-github">View in Github</a></li>
+						</ul>
+					</section>
+                    <section>
+                        <h3>Tags</h3>
+                        <a class="button">R</a>
+                        <a class="button">API</a>
+                        <a class="button">Statistics</a>
+                        <a class="button">Automated Taks</a>
+                        <a class="button">Time Series Analysis</a>
+                        <a class="button">Sentiment Analysis</a>
+                        <a class="button">udpipe</a>
+                        <a class="button">Text Analysis</a>
+                    </section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/DavideGiardini" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://linkedin.com/in/davide-giardini" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto:davide.giardini00@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
