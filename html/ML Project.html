@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Davide Giardini - Data Management Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+					<h1>Hello!<br> My name is <strong>Davide Giardini,</strong><br />
+					I'm a very passionate Data Science student</a>.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- One -->
+					<section id="one">
+                        <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
+						<header class="major">
+							<h1>Machine Learning Project</h1>
+                            <h3>Machine Learning Analysis of credit card approval.</h3>
+						</header>
+						<p>This Project was written in collaboration with Paolo Caggiano for the Machine Learning course in the Master Degree in Data Science. <br>
+                            Due to the increasing number of credit card users it has become crucial for banks to differentiate between good and bad costumers.
+							Many financial institutions like national and private banks rely on consumers’ information like their basic details, living standards, salary, yearly and monthly returns or their current income source.
+							This complete check and analysis can avoid to the institutions bearing a lot of technical and nontechnical losses.
+							The goal of this research is the identification of those clients that, based on their financial history, could end up being a bad investment for the bank.
+							Therefore, we want to investigate and understand which are the variables that have an important role in determining if a loan is payed off on time by a client.
+							This objective is carried forward through classification, one of the main techniques utilized in Machine Learning. <br>
+                            <br>
+                            To answer this questions, we use a <a href="https://www.kaggle.com/datasets/rikdifos/credit-card-approval-prediction">dataset from the Kaggle platform</a>.
+							After handling missing values and other operations of pre-processing, we the model through <strong>5 algorithms</strong>: Logistic Regression, Random Forest, MultiLayer Perceptron, Naive Bayes and Naive Bayes Tree.
+							The performances of all of them have been measured adequately.
+							In order to get a more effective estimates of the classifier’s performance measures we will use for the next analysis the K Fold cross validation to divide the data into k subsets.
+							<br>
+							To achieve a better model we implemented other techniques.<br>
+							For example, the dataset was unbalanced. To solve this we used both <strong>Oversampling</strong> method and the adoption of a <strong>cost matrix</strong>.
+                            <br>
+							In order to try to get a better model with a quicker learner we used the <strong>Feature Selection</strong> method.
+							Feature selection is the process of detecting relevant features and removing irrelevant, redundant, or noisy data.
+                            <br> <br>
+                            In conclusion, the increase in all of the F-score measures of all of the five algorithms over the holdout method have shown that both oversampling
+							and the adoption of the cost-matrix are a good way to address the problem of the unbalanced	dataset.
+							We also demonstrated how the Cost Sensitive Learning tend to achieve better results over the oversampling approach.
+							Furthermore, this type of learning could be further improved using a real cost matrix, coming from the bank’s data.<br>
+							For what regards the different algorithms, the Logistic and Naive Bayes classifiers have shown good performances across all of the different approaches implemented.
+							The Random Forest and the Naive Bayes Tree classifiers, instead, tend to give better results if paired with a Cost Sensitive learner.
+							Lastly, the Multilayer Perceptron, achieved very good results using all of the available variables, especially paired with the Cost	Sensitive Learner, while taking a big loss in performance when used together with a Feature Selector.</p>
+						<ul class="actions">
+							<li><a href="/images/fulls/ML report.pdf" download="Machine Learning for Credit Card Approval" class="button icon solid fa-download">Download Paper</a></li>
+						</ul>
+					</section>
+                    <section>
+                        <h3>Tags</h3>
+                        <a class="button">Machine Learning</a>
+                        <a class="button">Knime</a>
+                        <a class="button">Model Training</a>
+                        <a class="button">Cross-Validation</a>
+                        <a class="button">Cost Matrix</a>
+                        <a class="button">OverSampling</a>
+                        <a class="button">Multilayer Perceptron</a>
+                        <a class="button">Feature Selection</a>
+                    </section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/DavideGiardini" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://linkedin.com/in/davide-giardini" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto:davide.giardini00@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
