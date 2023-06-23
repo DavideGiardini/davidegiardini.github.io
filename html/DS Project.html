@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Davide Giardini - Data Management Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+					<h1>Hello!<br> My name is <strong>Davide Giardini,</strong><br />
+					I'm a very passionate Data Science student</a>.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- One -->
+					<section id="one">
+                        <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
+						<header class="major">
+							<h1>Data Semantics Project</h1>
+                            <h3>Studying the difference between philosophical schools with word embeddings.</h3>
+						</header>
+						<p>This Project was developed for the Data Semantics course in the Master Degree in Data Science. <br><br>
+                            <em>“The meaning of a word is its use in the language” (Wittgenstein, 1953)</em><br><br>
+							This phrase pronounced by philosopher Ludwig Wittgenstein outlines in a nutshell the main idea behind the word embeddings algorithms, and thus serves as a perfect symbolic bridge between philosophy and data semantics.<br>
+							Philosophy is a purely human subject: every individual in human history has had to wrestle with the questions that existence poses to us.
+							This means that the texts of this subject are many, extensive, and inevitably fragmented into different schools of thought, different ways of perceiving what we know.
+							Keeping track of them is difficult, with so many thoughts and so many points of view.<br>
+							But all these different answers always start from the same questions: those of humanity.
+							So why not use this algorithms of word embeddings to search, in the thoughts of the various philosophical currents, for the main differences in the answers of the same questions?<br>
+							<br>
+							An initial archive of texts that could be used to answer these questions could have been obtained from <a href="https://philosophydata.com/">The Philosophy Data Project</a>.
+							Indeed, this project demonstrates similar interests to mine and makes its data available on the <a href="https://www.kaggle.com/datasets/kouroshalizadeh/history-of-philosophy">Kaggle</a> platform.
+							An initial analysis of the corpus, however, showed an insufficient text size for training word embedding algorithms.
+							Therefore, the file was personally extensively enriched with all the philosophers' books available on <a href="https://www.gutenberg.org/">Project Gutenberg</a>.
+							The resulting division in schools of thought is:
+							<ol>
+								<li><strong>Nihilism:</strong> Nietzsche, Kierkegaard</li>
+								<li><strong>Empiricism:</strong> Berkeley, Hume, Locke</li>
+								<li><strong>Rationalism:</strong> Descartes, Leibniz, Malebranche, Spinoza</li>
+								<li><strong>German Idealism:</strong> Fichte, Hegel, Kant</li>
+								<li><strong>Analytics:</strong> Kripke, Lewis, Moore, Popper, Quine, Russel, Wittgenstein</li>
+								<li><strong>Aristotle:</strong> Aristotle</li>
+								<li><strong>Plato:</strong> Plato</li>
+							</ol>
+							An eight slice has been implemented from Wikipedia’s abstract. The usefulness of this additional slice is: more data to train the compass and the possibility to draw comparisons with a "neutral" slice.<br>
+							<br>
+                            The analysis was done with three algorithms: Word2Vec, CADE and SWEAT. Other 4 simple tools (functions) were then implemented by me to better carry an exploratory analysis with 8 slices.<br>
+							<br>
+							The result of the work were very interesting as the word embeddings demonstrated to have captured semantic differences in the meaning of some words, accordingly to what we would expect from the philosophical schools.
+							Analytics' view of logic as the fundation for understanding the universe is for example reflected both in the embeddings of logic and mathematics.
+							The same can be said for language, that is linked with "usage" for analytics, with "composition" for idealist and with "persuasion" for Aristotle, accordingly to the three schools' view on the matter.
+							Also the similarity between the embeddings of "idea" and "reality" for idealist is evident.
+							For plato, the words "idea" and "innate" and the words "evil" and "ignorance" are significantly more similar than in the other slices, confirming Plato's thoughts.
+							The same can be said for empiricism, in which the concept of "blank slate" is reflected in the vicinity of the embeddings of the words "mind" and "empty".
+							An analysis of the polarization of the embeddings shows how Nihilism philosophy's darker view of existence is reflected in the embeddings trained from that slice.
+							Lastly, a confrontation between the meanings of "knowledge" in the empiricist and rationalist schools reflects the views of the two currents: the word is linked with "experience" in the first school and with "intelligence" in the second.
+							<br>
+							Finally, a conclusion section highlights the concepts that have not been captured by the word embeddings, and tries to understand what could have been done to achieve better results.
+						</p>
+						<ul class="actions">
+							<li><a href="/images/fulls/DataSem.pdf" download="Data Semantics Project Presentation - Davide Giardini" class="button icon solid fa-download">Download Presentation</a></li>
+						</ul>
+					</section>
+                    <section>
+                        <h3>Tags</h3>
+                        <a class="button">Data Semantics</a>
+                        <a class="button">Word Embeddings</a>
+                        <a class="button">Word2Vec</a>
+                        <a class="button">cade</a>
+                        <a class="button">WEAT</a>
+                        <a class="button">NLP</a>
+                    </section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/DavideGiardini" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://linkedin.com/in/davide-giardini" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto:davide.giardini00@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
