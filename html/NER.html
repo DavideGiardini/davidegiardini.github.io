@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Davide Giardini - Data Management Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+					<h1>Hello!<br> My name is <strong>Davide Giardini,</strong><br />
+					I'm a very passionate Data Science student</a>.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- One -->
+					<section id="one">
+                        <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
+						<header class="major">
+							<h1>Data Semantics Project</h1>
+                            <h3>Recognizing entity in the text and linking them to their Wikipedia page.</h3>
+						</header>
+						<p>This assignment was developed for the Data Semantics course in the Master Degree in Data Science. <br><br>
+							The request for this assignment was to apply a spacy Named Entity Recognition pipeline on a text assigned individually.
+							We were then asked to evaluate the found spans by comparing them with the "gold standard" spans, using different matching criterias.
+							Similar metrics were also computed taking into account the correctness of the entity's recognized type (person, location, organization, date, ecc.).
+							Lastly, a qualitative analysis of the errors made in recognising spans and types was written.<br>
+							In the second part of the assignment we were asked to link the found entities to their Wikipedia page using various strategies (a naive approach, a bi-encoder BLINK instance and a complete BLINK instance).
+							After computing metrics to evaluate the linking correctness, a qualitative analysis of the found links was written.
+							The result show a general superior quality of the linking found by the two more complex approaches compared with the naive one.<br>
+							Some result were particularly interesting. Linking the words "Foreign Ministry", for example, highlights the three approaches' ability to understand the entity of a link based on its context:
+							<ol>
+								<li>The first naive method links this entity only to the page related to the "Ministry of foreign affairs" in general.</li>
+								<li>The second method tries to understand the state of the Ministry, but fails. Probably because of its vicinity with the word "Taiwan", the method misclassify it as "Ministry of Foreign Affairs (Taiwan)".</li>
+								<li>The third approach is by far the best one, classifying the entity as "Ministry of Foreign Affairs of the People's Republic of China", which is the correct classification.</li>
+							</ol>
+							A very interesting thing also happens when the three approaches try to link "Tang Shubei".
+							While both the BLINK approaches link him to "Tang Fei" (a writer) the first naive approach links him to the "Qiandao Lake incident".
+							While it is still to be considered an error, as the approach linked a person to an event, inside the linked wikipedia page Tang Shubei is cited as the vice president of the ARATS, who stressed that China authorities would deal with the problems created by the Quindao Lake incident.
+							Therefore, while the two BLINK approaches tried to link him with another persone, the naive method found the only wikipedia page in which this person was cited, and linked the entity to this page.<br>
+							A more in depth look at the code utilized in this assignment can be had through the downloadable Notebook or in my Github page.
+						</p>
+						<ul class="actions">
+							<li><a href="/images/fulls/Assignment4.html" download="NER and NEL assignment - Davide Giardini" class="button icon solid fa-download">Download Notebook</a></li>
+							<li><a href="https://github.com/DavideGiardini/NERandNEL" class="button icon brands fa-github">View in Github</a></li>
+						</ul>
+					</section>
+                    <section>
+                        <h3>Tags</h3>
+                        <a class="button">Data Semantics</a>
+                        <a class="button">Named Entity Linking</a>
+                        <a class="button">Named Entity Recognition</a>
+                        <a class="button">BLINK</a>
+                        <a class="button">spacy</a>
+                        <a class="button">python</a>
+                    </section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/DavideGiardini" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://linkedin.com/in/davide-giardini" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto:davide.giardini00@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
