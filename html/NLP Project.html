@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Davide Giardini - Data Semantics Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+					<h1>Hello!<br> My name is <strong>Davide Giardini,</strong><br />
+					I'm a very passionate Data Science student</a>.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- One -->
+					<section id="one">
+                        <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
+						<header class="major">
+							<h1>Natural Language Processing Project</h1>
+                            <h3>Finetuning Mistral 7B with QLoRA for KG construction.</h3>
+						</header>
+						<p>This Project was developed for the Natural Language Processing course in the Master Degree in Data Science. <br><br>
+                            Building Knowledge Graphs from unstructured text has traditionally required complex pipelines with multiple specialized models - a significant barrier for many developers and organizations. I set out to create a more accessible solution by fine-tuning a Large Language Model (LLM) for this specific task.<br><br>
+							I developed a novel approach to Automatic Knowledge Graph Construction (AKGC) using Mistral 7B, a state-of-the-art open-source LLM. The key innovation was allowing users to specify their desired Knowledge Graph schema through prompts, giving them control over what information to extract and how to structure it. To make this possible at scale, I implemented QLoRA for efficient fine-tuning on a single GPU.<br><br>
+							The project involved creating a comprehensive synthetic dataset from six Neo4j graph databases, carefully selected for their quality and real-world applications. This data was used to train and evaluate different approaches to AKGC. The results were compelling: the fine-tuned model achieved 81% precision and 77% recall on known graph schemas, significantly outperforming the base model. More importantly, it demonstrated superior zero-shot capabilities on entirely new schemas, showing true generalization of the task.<br>
+							Through rigorous experimentation, I uncovered crucial insights about AKGC with language models. While zero-shot approaches excel for single-document extraction, maintaining consistency across multiple sources requires few-shot examples to standardize entity formatting. This led to developing an improved version optimized for few-shot learning, which outperformed both the base and initial fine-tuned models.<br><br>
+							One particularly interesting finding was that early stopping during fine-tuning (around 50 steps) produced better generalization to new schemas. This suggests that longer training causes the model to overfit to specific database structures rather than learning generalizable AKGC skills.<br>
+							The final implementation provides an accessible alternative to traditional AKGC pipelines, making structured knowledge extraction more approachable for users with limited resources. Beyond the technical implementation, the project contributed valuable insights to the field and opened new research directions, particularly around creating more diverse training datasets and optimizing fine-tuning parameters.<br><br>
+							This project demonstrates my ability to tackle complex NLP challenges, implement cutting-edge machine learning techniques, and develop practical solutions that make advanced technology more accessible to the wider development community.
+						</p>
+						<ul class="actions">
+							<li><a href="/images/fulls/NLP.pdf" download="NLP Project Report - Davide Giardini" class="button icon solid fa-download">Download Presentation</a></li>
+						</ul>
+					</section>
+                    <section>
+                        <h3>Tags</h3>
+                        <a class="button">Fine Tuning</a>
+                        <a class="button">PyTorch</a>
+                        <a class="button">Mistral 7B</a>
+                        <a class="button">Large Language Models</a>
+                        <a class="button">QLoRA</a>
+                        <a class="button">AKGC</a>
+                    </section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/DavideGiardini" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://linkedin.com/in/davide-giardini" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto:davide.giardini00@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
