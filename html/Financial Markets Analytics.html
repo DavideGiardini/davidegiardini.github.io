@@ -24,28 +24,30 @@
                         <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
 						<header class="major">
 							<h1>Dynamic Portfolio Optimization</h1>
-                            <h3>Building and backtesting stock portfolios using 40+ financial indicators, screening models, and time-series forecasting.</h3>
+							<h3>Building and backtesting stock portfolios using 40+ financial indicators, screening models, and time-series forecasting.</h3>
 						</header>
-						<p>This Project was written in collaboration with Vittorio Haardt and Alberto Formigoni for the Financial Markets Analytics course in the Master Degree in Data Science. <br>
-							The aim of the project was to utilize <strong>several key indicators</strong> of several companies to build the Portfolio with the highest expected returns.<br>
-							The indicators used for the project were more than 40. They included, for example: <strong>PE ratio, EBITDA, Sales and Debt per Share, the Price and all of its Moving Averages, Volatility, Return on Equity, Price to Book Ratio</strong>, ecc.
-							For this reason, this project is also testament of our deep knowledge of these fundamental indicators.<br><br>
-							In our introductory phase, we built all the tools necessary for our analysis.<br>
-							After a first cleaning phase, we built a benchmark that would have been later used to compare all of our Portfolios.
-							We then built a <strong>complex Python function</strong> that could emulate a Screening model.
-							The function would decide, at every point in time, which stocks to buy and which stocks to sell, based on the companies indicators.
-							Then, it would also compute, at every month, the value of the Portfolio, taking into account both our buy/sell operations and the stocks' price's movements.
-							This function would then be used (with some slight changes) at every point of the document, to evaluate different Screening techniques.
-							<br>
-							We then passed on to build other function that would compute different metrics to evaluate the performances of each Portfolio: <strong>Information ratio</strong>, <strong>Sharpe ratio</strong> and <strong>Sortino ratio</strong>.<br>
-							<br>
-							After setting up all of our tools, we started to build different portfolio with different screening strategies and evaluate their performances.<br>
-							We therefore applied a <strong>Sequential Screening</strong> and then a <strong>Simultaneous Screening</strong>.
-							After that, we developed a technique to <strong>account for the correlation between the factors</strong>.
-							Then we built a <strong>Weighted Portfolio</strong> (weighted on the stocks' volatility), and a Portfolio based on <strong>momentum</strong>.<br>
-							For the last point, we were asked to try to implement a <strong>Deep Learning</strong> technique to build the portfolio from the data.
-							We decided to use <strong>Prophet</strong>: a Deep Learning algorithm developed by Meta to forecast time series.<br><br>
-							The Project went on achieving the best results.
+						<p>
+							This project was developed in collaboration with Vittorio Haardt and Alberto Formigoni for the Financial Markets Analytics course in the Master’s Degree in Data Science.<br><br>
+							
+							The goal of the project was to utilize a broad set of <strong>key financial indicators</strong> from multiple companies to construct a portfolio with the highest expected returns.<br>
+							More than 40 indicators were used, including: <strong>PE ratio, EBITDA, sales and debt per share, stock price and its moving averages, volatility, return on equity, price-to-book ratio</strong>, and others.
+							This wide range of metrics also demonstrates our strong understanding of both fundamental and technical indicators.<br><br>
+
+							In the initial phase, we built all the tools necessary for our analysis.<br>
+							After a preliminary data cleaning phase, we constructed a benchmark to later compare all portfolio strategies against.<br>
+							A <strong>custom Python function</strong> was then implemented to simulate a screening model: this function made monthly decisions on which stocks to buy or sell, based on companies’ indicators.
+							It also computed the monthly portfolio value by taking into account both the buy/sell operations and price movements.<br>
+							This screening function was reused, sometimes with minor modifications, throughout the project to evaluate different screening strategies.<br><br>
+
+							We also developed additional functions to compute several key performance metrics for each portfolio: <strong>Sharpe ratio</strong>, <strong>Sortino ratio</strong>, and <strong>Information ratio</strong>.<br><br>
+
+							Once all analytical tools were in place, we implemented various screening strategies and compared their performance.<br>
+							These included <strong>Sequential Screening</strong>, <strong>Simultaneous Screening</strong>, and an approach that <strong>accounts for correlations between factors</strong>.<br>
+							We also designed a <strong>Volatility-Weighted Portfolio</strong> and a <strong>Momentum-Based Portfolio</strong>.<br><br>
+
+							For the final part of the project, we explored the use of <strong>Deep Learning</strong> for portfolio construction. We selected <strong>Prophet</strong>, a time-series forecasting model developed by Meta, to predict future stock prices and guide investment decisions.<br><br>
+
+							The project achieved outstanding results and demonstrated the practical application of advanced financial analysis and machine learning techniques in portfolio optimization.
 						</p>
 						<ul class="actions">
 							<li><a href="/images/fulls/Financial Markets Analytics Project.html" download="Financial Markets Analytics Project - DG" class="button icon solid fa-download">Download Notebook</a></li>

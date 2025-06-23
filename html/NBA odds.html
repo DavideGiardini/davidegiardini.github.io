@@ -23,72 +23,79 @@
 					<section id="one">
                         <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
 						<header class="major">
-							<h1>Scraping NBA's odds</h1>
-                            <h3>WebScraping NBA's Asian Handicaps and Over/Unders from <a href="https://www.oddsportal.com/">oddsportal.com</a> to evaluate the accuracy of NBA odds market.</h3>
+							<h1>Scraping NBA Odds</h1>
+							<h3>Web scraping NBA Asian Handicaps and Over/Unders from <a href="https://www.oddsportal.com/">oddsportal.com</a> to evaluate the accuracy of the NBA betting market.</h3>
 						</header>
-						<p>In the last year of my University Degree in "Statistical Sciences of Economy and Business" I had the pleasure to help one of my uni friends in the writing of his Thesis.
-							As he had a very deep passion for sports, he decided to merge his hobby with statistics. Fortunately for him, sport and statistics are in fact very close to each other, especially in the field of betting.
-							What he wanted to do was trying to <strong>evaluate the odds' precision</strong>.
-							The way he intended to do it was by comparing Asian Handicaps and Over/Unders used before the match for bets with the final result of the match itself. <br>
-                            <br>
-							<blockquote><h4>Asian Handicap</h4>Asian handicap betting is a form of betting in which teams are handicapped according to their form so that a stronger team must win by more points for a bet on them to win.</blockquote>
-							<blockquote><h4>Over/Under</h4>The over/under predicts the combined score of the two teams. Then, the bettors will bet if the combined score would be either more than or less than that number.</blockquote>
-                            For every match, every possible score of both the AH and the O/U is given two odds, one represents the probability that the real AH or O/U will be lower, the other represents the probability that the two will be higher.
-							In this way, the Asian Handicap or the Over/Under for which the two odds are equal (or very near to one another) is the one that the betting market predicts as more probable. <br>
-                            <br>
-							<h4>An example to understand better</h4>
-							In Game 1 of the 2022 <a href="https://www.oddsportal.com/basketball/usa/nba/golden-state-warriors-boston-celtics-MweE8wV8/#ah;1">Finals betweet Golden State Warriors and Boston Celtics</a>, the two Asian Handicap odds reach the same value (1.90) at the AH -3.5.
-							This means that, for the betting market, it is equally probable that the final score will be more than 3.5 points in favor of GSW or less than 3.5 points in favor of GSW, that is to say that the betting market best prediction is that GSW will win with 3.5 points over Boston.<br>
-							In the same match, the two Over/Under odds reach the same value (1.90) at O/U +214.
-							This means that, for the betting market, it is equally probable that the final combined score will be more than or less than 214 points, that is to say that the betting market best prediction is that the combined points will be 214.
-							<br>
-							<blockquote><h4>The Objective</h4>What my friend wanted to do was to compare the AH and O/U in which the two odds reache the same value with the real difference in point (AH) and the real combined score (O/U).</blockquote>
-							<br>
+
+						<p>
+							In the final year of my Bachelor's degree in <em>Statistical Sciences for Economics and Business</em>, I had the opportunity to assist a university friend with his thesis.
+							As a passionate sports enthusiast, he decided to combine his love for sports with his interest in statistics, an ideal match, particularly in the context of betting markets.
+							His goal was to <strong>evaluate the precision of betting odds</strong> by comparing pre-match Asian Handicaps and Over/Unders to the actual match outcomes.<br><br>
+
+							<blockquote>
+								<h4>Asian Handicap</h4>
+								A form of betting in which one team is given a point advantage or disadvantage to level the playing field. A stronger team must win by more points for a bet on them to be successful.
+							</blockquote>
+
+							<blockquote>
+								<h4>Over/Under</h4>
+								A type of bet that predicts the total combined score of both teams. Bettors wager on whether the actual score will be over or under a specified number.
+							</blockquote>
+
+							For each match, every possible value of the Asian Handicap (AH) or Over/Under (O/U) is associated with two odds: one for the outcome being lower and one for it being higher.
+							The AH or O/U point at which the two odds are equal, or nearly equal, represents the market's most balanced prediction.<br><br>
+
+							<h4>Example</h4>
+							In Game 1 of the 2022 <a href="https://www.oddsportal.com/basketball/usa/nba/golden-state-warriors-boston-celtics-MweE8wV8/#ah;1">NBA Finals between the Golden State Warriors and the Boston Celtics</a>,
+							the AH odds were equal at -3.5 (1.90 each), implying the market's best estimate was that the Warriors would win by 3.5 points.
+							Similarly, the O/U odds balanced at 214 points, indicating that the market predicted a total combined score of 214.<br><br>
+
+							<blockquote>
+								<h4>The Objective</h4>
+								The aim was to compare the balanced AH and O/U values with the actual point differential and total score of the game to assess how accurate the betting market was.
+							</blockquote><br>
+
 							<h4>The Scraper</h4>
-							It didn't take long for my friend to realise that there wheren't any dataset that he could use for is research.
-							At the time I had just finished my <a href="https://freecodecamp.org/certification/davide_giardini/scientific-computing-with-python-v7">Scientific Computing with Python</a> and <a href="https://freecodecamp.org/certification/davide_giardini/data-analysis-with-python-v7">Data Analysis with Python</a> FreeCodeCamp's certifications, so I was eager to make a real use out of the Python skills I learned.<br>
-							<br>
-							The scraper uses Selenium and Beautiful Soup to:
+							Since no suitable dataset existed, I offered to help by building a web scraper.
+							I had just completed the <a href="https://freecodecamp.org/certification/davide_giardini/scientific-computing-with-python-v7">Scientific Computing with Python</a> and
+							<a href="https://freecodecamp.org/certification/davide_giardini/data-analysis-with-python-v7">Data Analysis with Python</a> certifications from freeCodeCamp and was eager to apply my skills to a real-world project.<br><br>
+
+							The scraper, built with Selenium and BeautifulSoup, performs the following steps:
 							<ol>
-								<li>Access oddsportal.com</li>
-								<li>Change the time zone</li>
-								<li>Loop through the seasons</li>
-								<ul>
-									<li>Loop through the pages <br>
-									For every page use the function scrape_links to scrape, for every match:</li>
-									<ol class="nowl">
-										<li>The teams involved</li>
-										<li>The final score</li>
-										<li>The date</li>
-										<li>The category (Pre-Season, Regular-Season, Play-In, Play-Off)</li>
-										<li>The links to the odds for the match</li>
-									</ol>
-								</ul>
-							<li>For every link just scraped use the function scrape_odds to:</li>
-								<ul>
-								<li>Open the Asian Handicap section, scrape the odds, find the AH for which the two odds are the most near to one another</li>
-								<li>Open the Over/Under section, scraoe the odds, find the O/U for which the two odds are the most near to one another</li>
-								<li>Scrape the score in every quarter</li>
-								</ul>
-							<li>Use the function correction to recheck the links that lead to missing values</li>
+								<li>Access <code>oddsportal.com</code> and set the desired time zone.</li>
+								<li>Loop through NBA seasons and their corresponding pages.</li>
+								<li>For each match:
+									<ul>
+										<li>Scrape the teams, final score, date, competition category (Pre-Season, Regular Season, Play-In, Play-Off), and link to the odds page.</li>
+									</ul>
+								</li>
+								<li>For each match's odds page:
+									<ul>
+										<li>Scrape the Asian Handicap odds and identify the AH with the closest pair of odds.</li>
+										<li>Scrape the Over/Under odds and identify the O/U with the closest pair of odds.</li>
+										<li>Scrape quarter-by-quarter scores.</li>
+									</ul>
+								</li>
+								<li>Run a correction function to recover any missing or failed data.</li>
 							</ol>
-							<h4>The resulting Dataset</h4>
-							The resulting dataset provides data from the 2010/2011 NBA season to the current 2021/2022.<br>
-							It is composed of <strong>15868 observation of 12 variables</strong>:
+
+							<h4>The Final Dataset</h4>
+							The resulting dataset includes matches from the 2010/2011 to the 2021/2022 NBA seasons. It contains <strong>15,868 observations</strong> across <strong>12 variables</strong>:
 							<ol>
-								<li><strong>Names:</strong> the teams involved in the match</li>
-								<li><strong>Link:</strong> the link to the odds of the match</li>
-								<li><strong>Score:</strong> the final score</li>
-								<li><strong>Score.q:</strong> the score at the end of every quarter</li>
-								<li><strong>OverTime:</strong> Boolean, True if the match went to Overtime</li>
-								<li><strong>Score.OT:</strong> Score at the beginning of the Overtime</li>
-								<li><strong>Date:</strong> the date of the match</li>
-								<li><strong>Category:</strong> can be Pre-Season, Regular-Season, Play-In, Play-Off</li>
-								<li><strong>AH:</strong> the Asian Handicap for which the two odds are the most near to one another</li>
-								<li><strong>diff.AH:</strong> the difference between the two nearest odds in the AH section</li>
-								<li><strong>O/U:</strong> the Over/Under for which the two odds are the most near to one another</li>
-								<li><strong>diff.OU:</strong> the difference between the two nearest odds in the O/U section</li>
+								<li><strong>Names:</strong> Teams involved in the match</li>
+								<li><strong>Link:</strong> URL to the odds page</li>
+								<li><strong>Score:</strong> Final score of the match</li>
+								<li><strong>Score.q:</strong> Scores at the end of each quarter</li>
+								<li><strong>OverTime:</strong> Boolean indicating if the game went to overtime</li>
+								<li><strong>Score.OT:</strong> Score at the beginning of overtime</li>
+								<li><strong>Date:</strong> Date of the match</li>
+								<li><strong>Category:</strong> Pre-Season, Regular Season, Play-In, or Play-Off</li>
+								<li><strong>AH:</strong> Asian Handicap with the most balanced odds</li>
+								<li><strong>diff.AH:</strong> Difference between the two closest AH odds</li>
+								<li><strong>O/U:</strong> Over/Under with the most balanced odds</li>
+								<li><strong>diff.OU:</strong> Difference between the two closest O/U odds</li>
 							</ol>
+						</p>
 						<ul class="actions">
                             				<li><a href="https://github.com/DavideGiardini/OddsPortal-WebScraper" class="button icon brands fa-github">View on Github</a></li>
 							<li><a href="https://www.kaggle.com/datasets/giardinidavide/nba-odds" class="button icon brands fa-kaggle">View on Kaggle</a></li>

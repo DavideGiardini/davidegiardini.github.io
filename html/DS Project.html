@@ -24,45 +24,47 @@
                         <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
 						<header class="major">
 							<h1>Philosophical Text Analysis with Word Embeddings</h1>
-                            <h3>Training and comparing Word2Vec word embeddings to analyze semantic differences among major philosophical schools.</h3>
+							<h3>Training and comparing Word2Vec word embeddings to analyze semantic differences among major philosophical schools.</h3>
 						</header>
-						<p>This Project was developed for the Data Semantics course in the Master Degree in Data Science. <br><br>
-                            <em>“The meaning of a word is its use in the language” (Wittgenstein, 1953)</em><br><br>
-							This phrase pronounced by philosopher Ludwig Wittgenstein outlines in a nutshell the main idea behind the word embeddings algorithms, and thus serves as a perfect symbolic bridge between philosophy and data semantics.<br>
-							Philosophy is a purely human subject: every individual in human history has had to wrestle with the questions that existence poses to us.
-							This means that the texts of this subject are many, extensive, and inevitably fragmented into different schools of thought, different ways of perceiving what we know.
-							Keeping track of them is difficult, with so many thoughts and so many points of view.<br>
-							But all these different answers always start from the same questions: those of humanity.
-							So why not training word embeddings to search, in the thoughts of the various philosophical currents, for the main differences in the answers of the same questions?<br>
-							<br>
-							An initial archive of texts that could be used to answer these questions could have been obtained from <a href="https://philosophydata.com/">The Philosophy Data Project</a>.
-							Indeed, this project demonstrates similar interests to mine and makes its data available on the <a href="https://www.kaggle.com/datasets/kouroshalizadeh/history-of-philosophy">Kaggle</a> platform.
-							An initial analysis of the corpus, however, showed an insufficient text size for training word embedding algorithms.
-							Therefore, the file was personally extensively enriched with all the philosophers' books available on <a href="https://www.gutenberg.org/">Project Gutenberg</a>.
-							The resulting division in schools of thought is:
+						<p>
+							This project was developed for the Data Semantics course in the Master’s Degree in Data Science.<br><br>
+							<em>“The meaning of a word is its use in the language” (Wittgenstein, 1953)</em><br><br>
+							This quote from philosopher Ludwig Wittgenstein perfectly encapsulates the core idea behind word embedding algorithms, serving as a symbolic bridge between philosophy and data semantics.<br>
+							Philosophy is a profoundly human discipline: every individual in history has wrestled with the existential questions it raises.
+							As a result, philosophical texts are vast, numerous, and fragmented across different schools of thought, each offering distinct ways of understanding knowledge and existence.
+							Keeping track of these perspectives is challenging, given the diversity of thought and expression.<br>
+							Yet, all these different answers begin with the same questions, the questions of humanity.
+							So why not train word embeddings to explore how different philosophical currents respond to the same fundamental issues?<br><br>
+
+							An initial dataset for this task was obtained from <a href="https://philosophydata.com/">The Philosophy Data Project</a>.
+							This project shares similar goals and makes its data available on <a href="https://www.kaggle.com/datasets/kouroshalizadeh/history-of-philosophy">Kaggle</a>.
+							However, an initial analysis of the corpus revealed that its size was insufficient for training robust word embedding models.
+							To address this, the dataset was extensively enriched with the complete texts of philosophers' works available on <a href="https://www.gutenberg.org/">Project Gutenberg</a>.
+							The resulting division into philosophical schools is as follows:
 							<ol>
 								<li><strong>Nihilism:</strong> Nietzsche, Kierkegaard</li>
 								<li><strong>Empiricism:</strong> Berkeley, Hume, Locke</li>
 								<li><strong>Rationalism:</strong> Descartes, Leibniz, Malebranche, Spinoza</li>
 								<li><strong>German Idealism:</strong> Fichte, Hegel, Kant</li>
-								<li><strong>Analytics:</strong> Kripke, Lewis, Moore, Popper, Quine, Russel, Wittgenstein</li>
+								<li><strong>Analytic Philosophy:</strong> Kripke, Lewis, Moore, Popper, Quine, Russell, Wittgenstein</li>
 								<li><strong>Aristotle:</strong> Aristotle</li>
 								<li><strong>Plato:</strong> Plato</li>
 							</ol>
-							An eight slice has been implemented from Wikipedia’s abstract. The usefulness of this additional slice is: more data to train the compass and the possibility to draw comparisons with a "neutral" slice.<br>
-							<br>
-                            The analysis was done with three algorithms: Word2Vec, CADE and SWEAT. Other 4 simple tools (functions) were then implemented by me to better carry an exploratory analysis with 8 slices.<br>
-							<br>
-							The result of the work were very interesting as the word embeddings demonstrated to have captured semantic differences in the meaning of some words, accordingly to what we would expect from the philosophical schools.
-							Analytics' view of logic as the fundation for understanding the universe is for example reflected both in the embeddings of logic and mathematics.
-							The same can be said for language, that is linked with "usage" for analytics, with "composition" for idealist and with "persuasion" for Aristotle, accordingly to the three schools' view on the matter.
-							Also the similarity between the embeddings of "idea" and "reality" for idealist is evident.
-							For plato, the words "idea" and "innate" and the words "evil" and "ignorance" are significantly more similar than in the other slices, confirming Plato's thoughts.
-							The same can be said for empiricism, in which the concept of "blank slate" is reflected in the vicinity of the embeddings of the words "mind" and "empty".
-							An analysis of the polarization of the embeddings shows how Nihilism philosophy's darker view of existence is reflected in the embeddings trained from that slice.
-							Lastly, a confrontation between the meanings of "knowledge" in the empiricist and rationalist schools reflects the views of the two currents: the word is linked with "experience" in the first school and with "intelligence" in the second.
-							<br>
-							Finally, a conclusion section highlights the concepts that have not been captured by the word embeddings, and tries to understand what could have been done to achieve better results.
+							An eighth "slice" was created using abstracts from Wikipedia. This addition provided both more training data and a "neutral" comparison baseline.<br><br>
+
+							The analysis was carried out using three main algorithms: Word2Vec, CADE, and SWEAT.
+							Additionally, four custom functions were developed to support exploratory analysis across the eight slices.<br><br>
+
+							The results were compelling: the word embeddings successfully captured semantic differences that aligned with philosophical expectations.
+							For example, the Analytic school’s emphasis on logic as a foundation for understanding reality was reflected in the embeddings for both “logic” and “mathematics”.
+							The word “language” was semantically close to “usage” in the Analytic school, to “composition” in Idealism, and to “persuasion” in Aristotle, consistent with each school’s perspective.
+							In Idealism, the similarity between “idea” and “reality” was particularly strong.
+							In Plato’s writings, the embeddings showed high similarity between “idea” and “innate” as well as between “evil” and “ignorance”, supporting key Platonic beliefs.
+							In the Empiricist slice, the concept of the “blank slate” emerged clearly in the proximity between “mind” and “empty”.
+							Polarization analysis revealed that the darker tone of Nihilism was reflected in the embeddings trained on its texts.
+							Finally, contrasting the meaning of “knowledge” across schools revealed its association with “experience” in Empiricism and with “intelligence” in Rationalism.<br><br>
+
+							A concluding section reflects on the philosophical concepts that were not successfully captured by the word embeddings and discusses what methodological changes might yield improved results.
 						</p>
 						<ul class="actions">
 							<li><a href="/images/fulls/DataSem.pdf" download="Data Semantics Project Presentation - Davide Giardini" class="button icon solid fa-download">Download Presentation</a></li>

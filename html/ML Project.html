@@ -24,34 +24,37 @@
                         <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
 						<header class="major">
 							<h1>Predicting Credit Card Approval with ML</h1>
-                            <h3>Predicting credit card approval with Logistic, Tree-based, and Neural classifiers using cost-aware learning.</h3>
+							<h3>Predicting credit card approval using Logistic, Tree-based, and Neural classifiers with cost-aware learning.</h3>
 						</header>
-						<p>This Project was written in collaboration with Paolo Caggiano for the Machine Learning course in the Master Degree in Data Science. <br>
-                            Due to the increasing number of credit card users it has become crucial for banks to differentiate between good and bad costumers.
-							Many financial institutions like national and private banks rely on consumers’ information like their basic details, living standards, salary, yearly and monthly returns or their current income source.
-							This complete check and analysis can avoid to the institutions bearing a lot of technical and nontechnical losses.
-							The goal of this research is the identification of those clients that, based on their financial history, could end up being a bad investment for the bank.
-							Therefore, we want to investigate and understand which are the variables that have an important role in determining if a loan is payed off on time by a client.
-							This objective is carried forward through classification, one of the main techniques utilized in Machine Learning. <br>
-                            <br>
-                            To answer this questions, we use a <a href="https://www.kaggle.com/datasets/rikdifos/credit-card-approval-prediction">dataset from the Kaggle platform</a>.
-							After handling missing values and other operations of pre-processing, we the model through <strong>5 algorithms</strong>: Logistic Regression, Random Forest, MultiLayer Perceptron, Naive Bayes and Naive Bayes Tree.
-							The performances of all of them have been measured adequately.
-							In order to get a more effective estimates of the classifier’s performance measures we will use for the next analysis the K Fold cross validation to divide the data into k subsets.
-							<br>
-							To achieve a better model we implemented other techniques.<br>
-							For example, the dataset was unbalanced. To solve this we used both <strong>Oversampling</strong> method and the adoption of a <strong>cost matrix</strong>.
-                            <br>
-							In order to try to get a better model with a quicker learner we used the <strong>Feature Selection</strong> method.
-							Feature selection is the process of detecting relevant features and removing irrelevant, redundant, or noisy data.
-                            <br> <br>
-                            In conclusion, the increase in all of the F-score measures of all of the five algorithms over the holdout method have shown that both oversampling
-							and the adoption of the cost-matrix are a good way to address the problem of the unbalanced	dataset.
-							We also demonstrated how the Cost Sensitive Learning tend to achieve better results over the oversampling approach.
-							Furthermore, this type of learning could be further improved using a real cost matrix, coming from the bank’s data.<br>
-							For what regards the different algorithms, the Logistic and Naive Bayes classifiers have shown good performances across all of the different approaches implemented.
-							The Random Forest and the Naive Bayes Tree classifiers, instead, tend to give better results if paired with a Cost Sensitive learner.
-							Lastly, the Multilayer Perceptron, achieved very good results using all of the available variables, especially paired with the Cost	Sensitive Learner, while taking a big loss in performance when used together with a Feature Selector.</p>
+						<p>
+							This project was developed in collaboration with Paolo Caggiano for the Machine Learning course in the Master’s Degree in Data Science.<br><br>
+
+							With the growing number of credit card users, it has become crucial for banks to distinguish between low-risk and high-risk customers.
+							Financial institutions, both public and private, rely on various client attributes such as personal information, income, expenses, and employment status to assess creditworthiness.
+							Effective analysis of these variables helps prevent both technical and financial losses.<br><br>
+
+							The objective of this research was to identify clients who, based on their financial history, are more likely to default.
+							Specifically, we aimed to determine which variables play the most significant role in predicting whether a loan will be repaid on time.
+							This goal was pursued through classification, a fundamental technique in machine learning.<br><br>
+
+							To address this problem, we used a <a href="https://www.kaggle.com/datasets/rikdifos/credit-card-approval-prediction">public dataset from the Kaggle platform</a>.
+							After handling missing values and performing other preprocessing steps, we trained models using five different algorithms:
+							<strong>Logistic Regression, Random Forest, Multilayer Perceptron, Naive Bayes,</strong> and <strong>Naive Bayes Tree</strong>.
+							Model performance was evaluated rigorously using <strong>K-Fold cross-validation</strong> to obtain more robust estimates.<br><br>
+
+							To improve the quality of predictions, we addressed class imbalance in the dataset by implementing both <strong>oversampling techniques</strong> and a <strong>cost matrix</strong> to reflect the asymmetric cost of misclassification.<br>
+							We also applied <strong>feature selection</strong> to remove irrelevant or redundant information and speed up model training. Feature selection involves identifying the most informative variables while discarding noise.<br><br>
+
+							In conclusion, the improvements observed across all five classifiers' F-scores demonstrated that both oversampling and cost-sensitive learning are effective strategies for handling imbalanced datasets.
+							In particular, <strong>cost-sensitive learning outperformed oversampling alone</strong>, and could be further enhanced by integrating real-world cost matrices provided by financial institutions.<br><br>
+
+							Regarding the performance of individual algorithms:
+							<ul>
+								<li><strong>Logistic Regression</strong> and <strong>Naive Bayes</strong> performed consistently well across all evaluation settings.</li>
+								<li><strong>Random Forest</strong> and <strong>Naive Bayes Tree</strong> benefited significantly when combined with cost-sensitive learning.</li>
+								<li><strong>Multilayer Perceptron</strong> showed excellent performance when trained on all features with cost-sensitive learning, but suffered a notable drop in performance when combined with feature selection.</li>
+							</ul>
+						</p>
 						<ul class="actions">
 							<li><a href="/images/fulls/ML report.pdf" download="Machine Learning for Credit Card Approval" class="button icon solid fa-download">Download Paper</a></li>
 						</ul>
