@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Davide Giardini - Flowers Images Classification with CNNs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Davide Giardini</strong></h1>
+					<h2>Data Scientist & AI Developer</h2>
+					<h3>I focus on LLMs, Deep Learning<br>and Knowledge Graphs.</h3>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- One -->
+					<section id="one">
+                        <a href="/index.html" class="fa fa-arrow-circle-left"> Back</a>
+						<header class="major">
+							<h1>Flowers Images Classification with CNNs</h1>
+							<h3>Multi-label flower image classification through custom-tuned Convolutional Neural Networks in TensorFlow.</h3>
+						</header>
+						<p>
+							This project was developed for the <strong>Deep Learning</strong> course in the Master’s Degree in Data Science.<br><br>
+							The task: perform <em>multi‑label classification</em> (five flower categories) using Convolutional Neural Networks (CNNs) built with <strong>TensorFlow / Keras</strong>.  
+							Beyond a straightforward application, the work demonstrates my ability to <em>read loss–accuracy curves, diagnose model behaviour, and iteratively reshape the network architecture</em> to reach the best validation performance.
+						</p>
+
+						<h4>Experimental Roadmap</h4>
+						<ul>
+							<li><strong>Baseline CNN.</strong> A minimalist network (conv–pool–dense) showed high training accuracy but poor generalization.</li>
+							<li><strong>Batch Normalization.</strong> Added after each convolution to stabilise gradients; training improved, yet validation curves remained volatile.</li>
+							<li><strong>Data Augmentation.</strong> Random crop, flip, brightness/contrast jitter reduced over‑fitting, raising validation accuracy at the cost of slower convergence.</li>
+							<li><strong>Learning‑Rate Tuning &amp; Larger Validation Split.</strong> Lower LR plus a 30 % validation set smoothed oscillations and yielded more reliable metrics.</li>
+							<li><strong>Deeper Architecture + Time‑Decay LR.</strong> A third conv block (128 filters) and an exponentially decaying LR pushed validation accuracy higher across epochs.</li>
+							<li><strong>Adam Optimizer.</strong> Switching from SGD to Adam delivered the single biggest jump in validation performance.</li>
+							<li><strong>Regularization Experiments.</strong> L<sub>2</sub> weight decay had little impact; Dropout narrowed the train–val gap but hurt accuracy—prompting a still deeper network with additional dense layers for capacity recovery.</li>
+							<li><strong>Segmentation Trial.</strong> Inspired by literature citing background noise as a key hurdle, I pre‑segmented flowers with Meta’s SAM. Accuracy <em>dropped</em> on all three segmented test sets, confirming that the tuned full‑image model remained superior.</li>
+						</ul>
+						<p>
+							The full code is included in the report below, while the presentation provides a detailed walkthrough of the progressive architectural refinements explored throughout the project.
+						</p>
+						<ul class="actions">
+							<li><a href="/images/fulls/Flowers Class code.html" download="Flowers Classification with CNNs - DG" class="button icon solid fa-download">Download Jupyter Notebook</a></li>
+							<li><a href="/images/fulls/Flowers Class presentazione.pdf" download="Flowers Classification with CNNs - Presentazione - DG" class="button icon solid fa-download">Download Presentation</a></li>
+						</ul>
+					</section>
+                    <section>
+                        <h3>Tags</h3>
+                        <a class="button">Deep Learning</a>
+						<a class="button">Computer Vision</a>
+                        <a class="button">CNNs</a>
+                        <a class="button">TensorFlow</a>
+                        <a class="button">Keras</a>
+                        <a class="button">Image Classification</a>
+                        <a class="button">Python</a>
+                        <a class="button">Jupyter Notebook</a>
+                    </section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/DavideGiardini" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://linkedin.com/in/davide-giardini" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto:davide.giardini00@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
